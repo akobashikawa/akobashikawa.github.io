@@ -30,6 +30,7 @@ ul.bullet {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	overflow: auto;
 }
 .link--social {
 	line-height: 1.6em;
@@ -47,7 +48,10 @@ ul.bullet {
 	font-size: 1.375em;
 }
 .main__sections {
-	font-size: 2.5em;
+	font-size: 2.1em;
+	@media (min-width: 640px) {
+		font-size: 2.5em;
+	}
 }
 .main__section {
 }
