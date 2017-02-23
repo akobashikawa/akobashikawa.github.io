@@ -17,6 +17,8 @@
   createjs.Sound.registerSound("js/SoundJS/_assets/audio/220176__gameaudio__confirm-click-spacey.mp3", 'ConfirmClickSpacey');
   createjs.Sound.registerSound("js/SoundJS/_assets/audio/220179__gameaudio__click-metal-ting.mp3", 'MetalTing');
   createjs.Sound.registerSound("js/SoundJS/_assets/audio/220177__gameaudio__quick-ui-or-event-deep.mp3", 'QuickUiEventDeep');
+
+  $('.section__content').css({'display': 'none'});
 })();
 
 function playSound (soundID) {
@@ -43,6 +45,10 @@ $('.title').on('click', function(e) {
 	}
 }).on('mouseenter', function() {
 		playSound('QuickUiEventDeep');
+});
+
+$('.testimonial').on('mouseenter', function() {
+    playSound('QuickUiEventDeep');
 });
 
 $('.img--rulo').on('click', function() {
