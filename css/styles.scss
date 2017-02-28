@@ -46,6 +46,7 @@ ul.bullet {
 }
 .main {
 	font-size: 1.375em;
+	overflow-x: hidden;
 }
 .main__sections {
 	font-size: 2.1em;
@@ -228,11 +229,12 @@ footer {
 	margin-top: 2em;
 }
 .testimonial {	
-	display: flex;
-	flex-wrap: wrap;
+	// display: flex;
+	// flex-wrap: wrap;
 	margin-bottom: 2em;
 	.testimonial__photo {
-		flex: 0 0 120px;
+		// flex: 0 0 120px;
+		display: inline-block;
 		width: 120px;
 		height: 120px;
 		border-radius: 50%;
@@ -248,14 +250,15 @@ footer {
 	}
 	.testimonial__comment {
 		$bg_color: #eef;
-		flex: 1;
+		// flex: 1;
 		font-size: 0.7em;
 		font-style: italic;
 		box-sizing: border-content;
-		border-radius: 0 20px 20px 20px;
+		border-radius: 20px;
 		background-color: $bg_color;
 		padding: 2em;
-		margin-left: 2em;
+		// margin-left: 2em;
+		margin-top: 2em;
 		position: relative;
 		text-align: left;
 		transition: opacity 0.5s;
@@ -263,11 +266,15 @@ footer {
 		&:before {
 			content: '';
 			display: block;
-			position: absolute;
-			top: 0;
-			left: calc(-2em + 1px);
-			border-top: 2em solid $bg_color;
+			position: relative;
+			// top: 0;
+			// left: calc(-2em + 1px);
+			width: 0;
+			margin: 0 auto;
+			top: -52px;
+			border-bottom: 1.2em solid $bg_color;
 			border-left: 2em solid transparent;
+			border-right: 2em solid transparent;
 		}
 		&:hover {
 			opacity: 1;
