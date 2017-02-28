@@ -243,7 +243,7 @@ footer {
     .testimonial .testimonial__comment:hover {
       opacity: 1; }
   .testimonial .testimonial__name {
-    text-align: left;
+    text-align: right;
     font-style: normal;
     margin-top: 1em; }
     .testimonial .testimonial__name .name {
