@@ -18,7 +18,7 @@
   createjs.Sound.registerSound("js/SoundJS/_assets/audio/220179__gameaudio__click-metal-ting.mp3", 'MetalTing');
   createjs.Sound.registerSound("js/SoundJS/_assets/audio/220177__gameaudio__quick-ui-or-event-deep.mp3", 'QuickUiEventDeep');
 
-  // $('.section__content').css({'display': 'none'});
+  $('.section__content').css({'display': 'none'});
 })();
 
 function playSound (soundID) {
