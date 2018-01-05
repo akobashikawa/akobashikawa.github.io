@@ -1,29 +1,54 @@
-(function loadSound () {
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/Game-AudioSprite.mp3", 'Game-AudioSprite');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/Game-Break.mp3", 'Game-Break');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/Game-Death.mp3", 'Game-Death');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/Game-Shot.mp3", 'Game-Shot');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/Game-Spawn.mp3", 'Game-Spawn');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/GU-StealDaisy.mp3", 'GU-StealDaisy');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/Humm.mp3", 'Humm');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/M-GameBG.mp3", 'M-GameBG');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/R-Damage.mp3", 'R-Damage');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/S-Damage.mp3", 'S-Damage');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/Thunder1.mp3", 'Thunder');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/ToneWobble.mp3", 'ToneWobble');
-  // createjs.Sound.registerSound("js/SoundJS/_assets/audio/U-CabinBoy3.mp3", 'U-CabinBoy3');
-  createjs.Sound.registerSound("js/SoundJS/_assets/audio/220171__gameaudio__flourish-spacey-1.mp3", 'FlorishSpace');
-  createjs.Sound.registerSound("js/SoundJS/_assets/audio/220208__gameaudio__click-pop-two-part.mp3", 'ClickPopTwoPart');
-  createjs.Sound.registerSound("js/SoundJS/_assets/audio/220176__gameaudio__confirm-click-spacey.mp3", 'ConfirmClickSpacey');
-  createjs.Sound.registerSound("js/SoundJS/_assets/audio/220179__gameaudio__click-metal-ting.mp3", 'MetalTing');
-  createjs.Sound.registerSound("js/SoundJS/_assets/audio/220177__gameaudio__quick-ui-or-event-deep.mp3", 'QuickUiEventDeep');
-
+(function init () {
   $('.section__content').css({'display': 'none'});
 })();
 
+var context = new (window.AudioContext || window.webkitAudioContext)();
+
+// oscType: 'sine'|'square'|'triangle'|'sawtooth'
+function playTune(frequency, oscType) {
+  var osc = context.createOscillator();
+  
+  var gain = context.createGain();
+  osc.type = oscType || 'sine';
+  osc.connect(gain);
+  gain.connect(context.destination)
+
+  // osc.frequency.value = frequency; // Hz DEPRECATED
+  osc.frequency.setValueAtTime(frequency, context.currentTime);
+  osc.start();
+  gain.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 1);  
+  //osc.stop(context.currentTime + 250);
+}
+
+function playRandomTune() {
+  // http://marcgg.com/blog/2016/11/01/javascript-audio/
+  var frecs = [
+    16.35, 17.32, 18.35, 19.45, 20.60, 21.83, 23.12, 24.50, 25.96, 27.50, 29.14, 30.87,
+    32.70, 34.65, 36.71, 38.89, 41.20, 43.65, 46.25, 49.00, 51.91, 55.00, 58.27, 61.74,
+    65.41, 69.30, 73.42, 77.78, 82.41, 87.31, 92.50, 98.00, 103.8, 110.0, 116.5, 123.5,
+    130.8, 138.6, 146.8, 155.6, 164.8, 174.6, 185.0, 196.0, 207.7, 220.0, 233.1, 246.9,
+    261.6, 277.2, 293.7, 311.1, 329.6, 349.2, 370.0, 392.0, 415.3, 440.0, 466.2, 493.9,
+    523.3, 554.4, 587.3, 622.3, 659.3, 698.5, 740.0, 784.0, 830.6, 880.0, 932.3, 987.8,
+    1047, 1109, 1175, 1245, 1319, 1397, 1480, 1568, 1661, 1760, 1865, 1976,
+    2093, 2217, 2349, 2489, 2637, 2794, 2960, 3136, 3322, 3520, 3729, 3951,
+    4186, 4435, 4699, 4978, 5274, 5588, 5920, 6272, 6645, 7040, 7459, 7902
+  ];
+  var oscTypes = ['sine', 'square', 'triangle', 'sawtooth'];
+  var frequency = frecs[ Math.floor( Math.random() * frecs.length ) ];
+  var oscType = oscTypes[ Math.floor( Math.random() * oscTypes.length ) ];
+  // var oscType = oscTypes[0];
+  playTune(frequency, oscType);  
+}
+
 function playSound (soundID) {
-  createjs.Sound.stop();
-  createjs.Sound.play(soundID);
+  switch (soundID) {
+    case 'mouseenter':
+      playRandomTune();
+      break;
+    case 'click':
+      playTune(880);
+      break;
+  }
 }
 
 $('.title').on('click', function(e) {
@@ -41,18 +66,18 @@ $('.title').on('click', function(e) {
 			$(v).slideDown(100);
 		});
 		$content.slideDown(500);
-		playSound('FlorishSpace');
+		playSound('title');
 	}
 }).on('mouseenter', function() {
-		playSound('QuickUiEventDeep');
+		playSound('mouseenter');
 });
 
 $('.testimonial').on('mouseenter', function() {
-    playSound('QuickUiEventDeep');
+    playSound('mouseenter');
 });
 
 $('.img--rulo').on('click', function() {
-	playSound('MetalTing');
+	playSound('click');
 });
 
 $('.parallax-window').parallax({imageSrc: 'https://c2.staticflickr.com/3/2464/3912031553_5c5c941b61_o.jpg'});
