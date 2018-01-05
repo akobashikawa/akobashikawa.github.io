@@ -89,6 +89,23 @@ ul.bullet {
 		// background-color: rgba(255,255,255,0.1);
 	}
 }
+
+.section__title .title:nth-child(1):before {
+  content: '˅';
+  font-family: monospace;
+  display: inline-block; 
+  background-color: rgba(255,255,255,0.3);
+  color: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  margin: 0 0.2em;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+	.title:nth-child(1):hover,
+	.title:nth-child(1).active {
+	  text-shadow: none;
+	}
+}
 .title--rulo {
 	color: rgba(255,255,255,0.5);
 }
