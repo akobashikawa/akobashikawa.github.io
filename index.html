@@ -6,24 +6,19 @@
     <title>Rulo Kobashikawa | Web Developer</title>
     <link rel="canonical" href="http://rulo.me/index-regular.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <meta description="Hi, I am Rulo Kobashikawa, a web developer with some backend and devops skills but focus on frontend.">
-    <meta message="Amazing web development">
     <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "NewsArticle",
-        "mainEntityOfPage": "http://example.ampproject.org/article-metadata.html",
-        "heading": "Rulo Kobashikawa, Web Developer",
-        "datePublished": "2018-01-05T18:13:00Z",
-        "dateModified": "2018-01-05T18:13:00Z",
-        "description": "Hi, I am Rulo Kobashikawa, a web developer with some backend and devops skills but focus on frontend.",
-        "image": {
-          "@type": "ImageObject",
-          "url": "http://rulo.me/img/rulokoba.jpg",
-          "height": 564,
-          "width": 418
-        }
-      }
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "http://rulo.me/", 
+      "name": "Rulo Kobashikawa | Web Developer | Freelancer | Blogger",
+      "author": {
+        "@type": "Person",
+        "name": "Rulo Kobashikawa"
+      },
+      "description": "Web developer with backend and devops skills but focus on frontend: HTML5, Javascript, React, PHP, WordPress",
+      "publisher": "Rulo Kobashikawa"
+    }
     </script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
@@ -162,21 +157,6 @@ ul.bullet {
   .title:hover, .title.active {
     text-shadow: 0 0 0 rgba(255, 255, 255, 0.4); }
 
-.section__title .title:nth-child(1):before {
-  content: '˅';
-  font-family: monospace;
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  margin: 0 0.2em;
-  width: 1em;
-  height: 1em;
-  text-align: center; }
-  .section__title .title:nth-child(1):before .title:nth-child(1):hover,
-  .section__title .title:nth-child(1):before .title:nth-child(1).active {
-    text-shadow: none; }
-
 .title--rulo {
   color: rgba(255, 255, 255, 0.5); }
 
@@ -257,6 +237,7 @@ ul.bullet {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  background-image: url(img/rulokoba.jpg);
   background-position: center center;
   background-size: cover;
   cursor: pointer;
@@ -265,6 +246,18 @@ ul.bullet {
     width: 100%; }
   .img--rulo:hover {
     transform: scale(1.1); }
+
+.img--russel-ormes {
+  background-image: url(img/russell-ormes.jpg);
+}
+
+.img--pablo-mancini {
+  background-image: url(img/pablo-mancini.jpg);
+}
+
+.img--jun-chinen-avatar {
+  background-image: url(img/jun-chinen-avatar.jpg);
+}
 
 .fx-scale:hover {
   transform: scale(1.1); }
@@ -310,6 +303,7 @@ footer {
     background-position: center center;
     background-size: cover;
     transition: all 1s; }
+
     .testimonial .testimonial__photo img {
       width: 100%; }
     .testimonial .testimonial__photo:hover {
@@ -347,13 +341,10 @@ footer {
     .testimonial .testimonial__name .position {
       font-size: 0.9em;
       margin-top: 0.5em; }
-
-.parallax-window {
-  min-height: 600px;
-  background: transparent; }
-
 </style>
+
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
     <!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   </head>
   <body>
@@ -386,14 +377,32 @@ footer {
           </div>
 
           <div class="section__content content--rulo text--center">
-            <div class="img--rulo" style="background-image: url(img/rulokoba.jpg);"><amp-img src="img/rulokoba.jpg" class="transparent"></amp-img></div>
+            <div class="img--rulo">
+              <amp-img 
+                src="img/rulokoba.jpg"
+                width="564"
+                height="418" 
+                class="transparent" 
+                layout="responsive"></amp-img></div>
             <p>Hi, I am Rulo</p>
 
             <p>
-              I am a web frontend developer, to turn web designs to reality.
+              I am a web developer with some backend and devops skills but focus on frontend.
             </p>
             <p>
-              I like to work in an agile way, using a problem solving approach in an atmosphere of trust and mutual respect.
+              I make layouts from graphic design to responsive HTML5.
+            </p>
+            <p>
+              I build sites with PHP, WordPress, AngularJS, and React.
+            </p>
+            <p>
+              I use agile methodologies, Git/GitHub, Kanban, Scrum, JIRA.
+            </p>
+            <p>
+              I have experience as instructor. My style is going in small steps towards concrete skills. Also I like to express concepts in a visual way.
+            </p>
+            <p>
+              I write in my blogs about programming, creativity, short stories, reflections and miscelaneous. Also I have a YouTube channel.
             </p>
 
             <p class="links--social">
@@ -408,8 +417,13 @@ footer {
 
             <div class="testimonials">
               <div class="testimonial">
-                <div class="testimonial__photo" style="background-image: url(img/russell-ormes.jpg);">
-                  <a href="https://pe.linkedin.com/in/russellormes" target="_blank"><amp-img src="img/russell-ormes.jpg" class="transparent"></amp-img></a>
+                <div class="testimonial__photo img--russel-ormes">
+                  <a href="https://pe.linkedin.com/in/russellormes" target="_blank"><amp-img 
+                src="img/russell-ormes.jpg"
+                width="206"
+                height="206" 
+                class="transparent" 
+                layout="responsive"></amp-img></a>
                 </div>
                 <div class="testimonial__comment">
                   <p>
@@ -424,8 +438,13 @@ footer {
                 </div>
               </div>
               <div class="testimonial">
-                <div class="testimonial__photo" style="background-image: url(img/pablo-mancini.jpg);">
-                  <a href="https://pe.linkedin.com/in/russellormes" target="_blank"><amp-img src="img/pablo-mancini.jpg" class="transparent"></amp-img></a>
+                <div class="testimonial__photo img--pablo-mancini">
+                  <a href="https://www.linkedin.com/in/pablomancini/" target="_blank"><amp-img 
+                src="img/pablo-mancini.jpg"
+                width="400"
+                height="400" 
+                class="transparent" 
+                layout="responsive"></amp-img></a>
                 </div>
                 <div class="testimonial__comment">
                   <p>
@@ -444,8 +463,13 @@ footer {
                 </div>
               </div>
               <div class="testimonial">
-                <div class="testimonial__photo" style="background-image: url(img/jun-chinen-avatar.jpg);">
-                  <a href="https://pe.linkedin.com/in/russellormes" target="_blank"><amp-img src="img/jun-chinen-avatar.jpg" class="transparent"></amp-img></a>
+                <div class="testimonial__photo img--jun-chinen-avatar">
+                  <a href="https://pe.linkedin.com/in/russellormes" target="_blank"><amp-img 
+                src="img/jun-chinen-avatar.jpg"
+                width="400"
+                height="400" 
+                class="transparent" 
+                layout="responsive"></amp-img></a>
                 </div>
                 <div class="testimonial__comment">
                   <p>
@@ -480,7 +504,7 @@ footer {
                   <i class="fa fa-clone fx-scale"></i>&nbsp;template
                 </p>
                 <p>
-                  Layout from provided graphic design to some template system (HTML5, PHP, WordPress, Django, ExpressJS)
+                  Layout in responsive HTML5 to template system in PHP, WordPress, Django, Express, etc.
                 </p>
               </li>
               <li>
@@ -495,7 +519,7 @@ footer {
                   <i class="fa fa-cubes fx-scale"></i>&nbsp;&nbsp;&nbsp;Frameworks
                 </p>
                 <p>
-                  Widely used open tools to faster develop and easier maintain
+                  Standard tools to develop software easier to maintain.
                 </p>
               </li>
             </ul>
@@ -518,7 +542,7 @@ footer {
               </li>
               <li>
                 <p>jQuery</p>
-                <p>widely used components and plugins, and expressive sintaxis for custom effects and animations running in highly-compatible websites.</p>
+                <p>Widely used components and plugins, and expressive sintaxis for custom effects and animations running in highly-compatible websites.</p>
               </li>
               <li>
                 <p>Frontend frameworks</p>
@@ -567,20 +591,5 @@ footer {
       </div>
     </div>
     
-    <div class="parallax-window">
-      <a class="cover"  href="https://www.flickr.com/photos/diego_sequeira/3912031553/in/photolist-6XGbFT-deRdKw-njfWLp-4tCSt2-oxD84j-nZuPVc-5PcpXU-q8m5EL-s8yj5q-X2P4r-6oVjar-scnf1r-9EukEi-8xdNEV-6oZ54h-6oV9Z4-6oZXeE-6ZwiSc-6oZSNQ-6oVLQa-6oZRfS-eBBfZt-9MmkBW-4rNqV4-fhaNwX-6oUTeB-6oVotg-6oVGmi-6oUrcH-6oUYye-8KP6tD-6oVz8a-6oZVLG-6oVqbx-6oZpdq-6oZNtG-6oVuzz-6oVBVt-6oUCBv-6oVDyp-6oVhPV-6oZczA-6oZFaU-6oUFyP-8KP5p6-p2uaH8-6oYZRm-6oYEL9-6oUUPt-9b38H7" target="_blank">
-        <div class="sign">
-          From Flickr by Diego Sequeira
-        </div>
-      </a>
-    </div>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/parallax.min.js"></script>
-    <script src="js/scripts.js?201801051649"></script>
-
-    <script>
-    </script>
   </body>
 </html>
